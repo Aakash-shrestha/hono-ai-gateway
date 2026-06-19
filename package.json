@@ -1,0 +1,26 @@
+{
+  "name": "hono-ai-gateway",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260619.1",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "hono": "^4.12.26"
+  },
+  "dependencies": {}
+}
