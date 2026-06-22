@@ -5,7 +5,7 @@ import { getCached, hashPrompt, setCached } from "./cache";
 import { callWithFallback } from "./router";
 
 export function createGateway(config: GatewayConfig) {
-  const handle = async (c: Context) => {
+  const handle = async (c: Context<any>) => {
     const authHeader = c.req.header("Authorization");
     const isValid = validateAuth(authHeader, config.gatewayApiKey); //closure, config, outer function parameter is used in the inner function
     if (!isValid) {
